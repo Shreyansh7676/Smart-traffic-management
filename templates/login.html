@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Signal Drishti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../static/styles.css">
+  <link rel="stylesheet" href="../static/styles/header.css">
+  <link rel="stylesheet" href="../static/styles/general.css">
+  <link rel="stylesheet" href="../static/styles/navbar.css">
+  <link rel="stylesheet" href="../static/styles/footer.css">
+  <link rel="stylesheet" href="../static/styles/toggle-switch.css">
+  <link rel="stylesheet" href="../static/styles/main.css">
+
+  <link rel="icon" type="image/x-icon" href="../static/images/favicon2.png"><!--Icon bc-->
+</head>
+<body>
+  <header>
+    <div class="upper-half">
+      <div class="home">
+        <img src="../static/images/home-icon.png" alt="home-icon">
+        <p>Home</p>
+      </div>
+      <div class="sra">
+        <img src="../static/images/sra-icon.png" alt="Screen Reader Tools">
+        <p>Screen Reader Tools</p>
+      </div>
+      <div class="fontSize">
+        <img src="../static/images/font-size.png" alt="font-size">
+        <p>Font Size</p>
+      </div>
+      <div class="contrast">
+        <input type="checkbox" class="theme-checkbox">
+        <p>Contrast</p>
+      </div>
+      <div class="language">
+        <img src="../static/images/lang-icon.png" alt="language">
+        <p>EN</p>
+      </div>
+      <div class="zoom">
+        <img src="../static/images/zoom-icon.png" alt="zoom">
+        <p>Zoom</p>
+      </div>
+      <div class="search">
+        <input type="text" class="search-bar" placeholder="Search">
+        <button class="fa-solid fa-magnifying-glass" id="searchButton">
+          <!-- <img src="../static/images/search-icon.png" alt="search"> -->
+        </button>
+      </div>
+    </div>
+    <div class="lower-half">
+      <div class="signal-drishti">
+        <img src="../static/images/signal-drishti-logo.png" alt="Signal Drishti">
+        <p>Signal Drishti</p>
+      </div>
+      <div class="govt-org">
+        <img src="../static/images/satyamev-jayate.png" alt="satyamev-jayate">
+        <div class="govt-org-name">
+          <p id=g>Government of India</p>
+          <p id=m>Minstry of Science & Technology</p>
+        </div>
+      </div>
+      <div class="kuch-logo">
+        <img src="../static/images/g20-logo.png" alt="g20-logo">
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="login">
+      <div class="rest-login">
+        <p>Login Here</p>
+        <form action="{{ url_for('login') }}" method="POST">
+          <label>Username</label>
+          <input type="text" placeholder="Username" required/>
+          <label>Password</label>
+          <input type="password" placeholder="Password" id="d" required />
+          <button >Submit</button>
+        </form> 
+      </div>
+      <!-- <img class="signal-logo" src="../static/login_images/favicon2.png">   -->
+    </div>
+  </main>
+  <footer>
+    <div class="terms">
+      <h1>Terms and Policies</h1>
+      <p>Privacy Policy</p>
+      <p>Hyperlink Policy</p>
+      <p>Website Policy</p>
+      <p>Content Policies</p>
+      <p>Contingency Plan</p>
+    </div>
+    <div class="about">
+      <h1>About</h1>
+      <p>About Us</p>
+      <p>Sitemap</p>
+      <p>Terms of Use</p>
+      <p>MoRTH</p>
+      <p>CMVR 1989</p>
+    </div>
+    <div class="resources">
+      <h1>Resources</h1>
+      <p>Fees and User Chargers</p>
+      <p>Act, Rules and Policies</p>
+      <p>Permit Fees and Period</p>
+      <p>Manual</p>
+      <p>Homologation</p>
+    </div>
+    <div class="help">
+      <h1>Help</h1>
+      <p>Contact Us</p>
+      <p>FAQs</p>
+      <p>Raise a ticket</p>
+      <p>Calendar</p>
+      <p>Web Information Manager</p>
+    </div>
+    <div class="etc">
+      <img src="../static/images/mst-logo.png" alt="ministry of science and technology">
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/101cd2c78e.js" crossorigin="anonymous"></script>
+</body>
+</html>

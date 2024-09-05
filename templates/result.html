@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection Results</title>
+    <style>
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .result-item {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .result-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .result-item h2 {
+            font-size: 1.2em;
+        }
+    </style>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/styles/header.css">
+    <link rel="stylesheet" href="../static/styles/general.css">
+    <link rel="stylesheet" href="../static/styles/navbar.css">
+    <link rel="stylesheet" href="../static/styles/footer.css">
+    <link rel="stylesheet" href="../static/styles/toggle-switch.css">
+</head>
+<body>
+
+    <header>
+        <div class="upper-half">
+          <div class="home">
+            <img src="../static/images/home-icon.png" alt="home-icon">
+            <p>Home</p>
+          </div>
+          <div class="sra">
+            <img src="../static/images/sra-icon.png" alt="Screen Reader Tools">
+            <p>Screen Reader Tools</p>
+          </div>
+          <div class="fontSize">
+            <img src="../static/images/font-size.png" alt="font-size">
+            <p>Font Size</p>
+          </div>
+          <div class="contrast">
+            <input type="checkbox" class="theme-checkbox">
+            <p>Contrast</p>
+          </div>
+          <div class="language">
+            <img src="../static/images/lang-icon.png" alt="language">
+            <p>EN</p>
+          </div>
+          <div class="zoom">
+            <img src="../static/images/zoom-icon.png" alt="zoom">
+            <p>Zoom</p>
+          </div>
+          <div class="search">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button class="search-button">
+              <img src="../static/images/search-icon.png" alt="search">
+            </button>
+          </div>
+        </div>
+        <div class="lower-half">
+          <div class="signal-drishti">
+            <img src="../static/images/signal-drishti-logo.png" alt="Signal Drishti">
+            <p>Signal Drishti</p>
+          </div>
+          <div class="govt-org">
+            <img src="../static/images/satyamev-jayate.png" alt="satyamev-jayate">
+            <div class="govt-org-name">
+              <p id=g>Government of India</p>
+              <p id=m>Minstry of Science & Technology</p>
+            </div>
+          </div>
+          <div class="kuch-logo">
+            <img src="../static/images/g20-logo.png" alt="g20-logo">
+          </div>
+        </div>
+      </header>
+
+
+    <h1>Detection Results</h1>
+    
+    <div class="results-container">
+        <!-- Display result for the first image -->
+        <div class="result-item">
+            <h2>Camera 1</h2>
+            <img src="{{ url_for('uploaded_file', filename=output_image1.split('/')[-1]) }}" alt="Detected Image 1">
+            <p>Number of cars detected: {{ vehicle_counts1['car'] }}</p>
+            <p>Number of buses detected: {{ vehicle_counts1['bus'] }}</p>
+            <p>Number of trucks detected: {{ vehicle_counts1['truck'] }}</p>
+            <p>Number of two-wheelers detected: {{ vehicle_counts1['motorbike'] }}</p>
+            <p><b>Green light duration: {{ green_light_durations[0] }} seconds</b></p>
+        </div>
+        
+        <!-- Display result for the second image -->
+        <div class="result-item">
+            
+            <h2>Camera 2</h2>
+            <img src="{{ url_for('uploaded_file', filename=output_image2.split('/')[-1]) }}" alt="Detected Image 2">
+            <p>Number of cars detected: {{ vehicle_counts2['car'] }}</p>
+            <p>Number of buses detected: {{ vehicle_counts2['bus'] }}</p>
+            <p>Number of trucks detected: {{ vehicle_counts2['truck'] }}</p>
+            <p>Number of two-wheelers detected: {{ vehicle_counts2['motorbike'] }}</p>
+            <p><b>Green light duration: {{ green_light_durations[1] }} seconds</b></p>
+        </div>
+        
+        <!-- Display result for the third image -->
+        <div class="result-item">
+            <h2>Camera 3</h2>
+            <img src="{{ url_for('uploaded_file', filename=output_image3.split('/')[-1]) }}" alt="Detected Image 3">
+            <p>Number of cars detected: {{ vehicle_counts3['car'] }}</p>
+            <p>Number of buses detected: {{ vehicle_counts3['bus'] }}</p>
+            <p>Number of trucks detected: {{ vehicle_counts3['truck'] }}</p>
+            <p>Number of two-wheelers detected: {{ vehicle_counts3['motorbike'] }}</p>
+            <p><b>Green light duration: {{ green_light_durations[2] }} seconds</b></p>
+        </div>
+        
+        <!-- Display result for the fourth image -->
+        <div class="result-item">
+            <h2>Camera 4</h2>
+            <img src="{{ url_for('uploaded_file', filename=output_image4.split('/')[-1]) }}" alt="Detected Image 4">
+            <p>Number of cars detected: {{ vehicle_counts4['car'] }}</p>
+            <p>Number of buses detected: {{ vehicle_counts4['bus'] }}</p>
+            <p>Number of trucks detected: {{ vehicle_counts4['truck'] }}</p>
+            <p>Number of two-wheelers detected: {{ vehicle_counts4['motorbike'] }}</p>
+            <p><b>Green light duration: {{ green_light_durations[3] }} seconds</b></p>
+        </div>
+    </div>
+    
+    <a href="/">Upload another set of images</a>
+
+    <footer>
+        <div class="terms">
+          <h1>Terms and Policies</h1>
+          <p>Privacy Policy</p>
+          <p>Hyperlink Policy</p>
+          <p>Website Policy</p>
+          <p>Content Policies</p>
+          <p>Contingency Plan</p>
+        </div>
+        <div class="about">
+          <h1>About</h1>
+          <p>About Us</p>
+          <p>Sitemap</p>
+          <p>Terms of Use</p>
+          <p>MoRTH</p>
+          <p>CMVR 1989</p>
+        </div>
+        <div class="resources">
+          <h1>Resources</h1>
+          <p>Fees and User Chargers</p>
+          <p>Act, Rules and Policies</p>
+          <p>Permit Fees and Period</p>
+          <p>Manual</p>
+          <p>Homologation</p>
+        </div>
+        <div class="help">
+          <h1>Help</h1>
+          <p>Contact Us</p>
+          <p>FAQs</p>
+          <p>Raise a ticket</p>
+          <p>Calendar</p>
+          <p>Web Information Manager</p>
+        </div>
+        <div class="etc">
+          <img src="../static/images/mst-logo.png" alt="ministry of science and technology">
+        </div>
+      </footer>
+</body>
+</html>

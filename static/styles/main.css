@@ -1,0 +1,70 @@
+.login {
+  padding: 30px 50px;
+  position: relative;
+  top: 200px;
+  left: 34%;
+  align-self: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 32%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 12px;
+
+}
+
+.login p {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.rest-login {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.rest-login label {
+  font-size: 18px;
+}
+
+.rest-login input {
+  width: 300px;
+  height: 30px;
+  padding: 2px 16px;
+  display: block;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: none;
+}
+
+.rest-login #d {
+  background-color: whitesmoke;
+}
+
+.submit {
+  background-color: rgb(50, 180, 137);
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  padding: 0 20px;
+}
+
+::placeholder {
+  color: black;
+}
+
+.signal-logo {
+  position: relative;
+  padding-right: 100px;
+  margin-left: 20px;
+}
